@@ -30,7 +30,7 @@ export class ClassifierComponent implements OnInit {
     this.lesion_types.set(4, 'Melanoma');
     this.lesion_types.set(5, 'Melanocytic Nevi');
     this.lesion_types.set(6, 'Vascular Skin Lesion');
-    this.model = await tf.loadGraphModel('../../assets/tf_models/mobilenet_skin_lesion_v1/model.json');
+    this.model = await tf.loadGraphModel('assets/tf_models/mobilenet_skin_lesion_v1/model.json');
     this.showSpinner = false;
   }
 
