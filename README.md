@@ -7,7 +7,7 @@ This web-app uses a Mobilenet neural network to classify images of skin lesions 
 ## Training
 The network was developed in Python with Tensorflow.
 
-The training process is availible in a Colab notebook -> [link](https://tinyurl.com/skin-lesion)
+The training process is available in a Colab notebook -> [link](https://tinyurl.com/skin-lesion)
 
 The network started from a pretrained Mobilenet. The architecture was modified to fit the problem. The network was trained on the HAM10000 dataset ->[link](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000)
 
