@@ -34,10 +34,6 @@ export class ClassifierComponent implements OnInit {
     this.showSpinner = false;
   }
 
-  toggleSpinner(){
-    this.showSpinner = !this.showSpinner;
-  }
-
   reset(){
     this.imgURL = null;
     this.type_pred = null;
@@ -68,8 +64,7 @@ export class ClassifierComponent implements OnInit {
   }
 
   async classify() {
-    this.toggleSpinner();
-
+    this.showSpinner = true;
     // create image object
     var img = new Image();
     img.src = this.imgURL;
@@ -85,7 +80,7 @@ export class ClassifierComponent implements OnInit {
     let pred_tensor: tf.Tensor = await this.model.predict(tensor);
     this.predictions = pred_tensor.arraySync();
     this.onehot_2_str_pred(pred_tensor);
-    this.toggleSpinner();
+    this.showSpinner = false;
   }
 
   onehot_2_str_pred(preds: tf.Tensor): void {
