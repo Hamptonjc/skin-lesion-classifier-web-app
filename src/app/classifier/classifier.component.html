@@ -1,0 +1,33 @@
+
+
+<div class="prediction" *ngIf="type_pred">
+  <h2>Classified as: {{type_pred}}</h2>
+</div>
+
+<div class="image">
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <img class="upload" [src]="imgURL" height="400" *ngIf="imgURL && !showSpinner">
+  <img class="net" [src]="'assets/images/net.png'" height="400" *ngIf="!imgURL && !showSpinner" style='color: white'>
+</div>
+
+
+<div class="buttons">
+  <button mat-raised-button (click)="openInput()" *ngIf="!imgURL" color="primary">
+  Select Image of Skin Lesion
+  </button>
+
+  <input id="fileInput" hidden type="file" accept='image/*'
+  (change)="imgUpload($event.target.files)"/>
+
+  <button mat-raised-button (click)="classify();" *ngIf="imgURL && !type_pred" color="primary">
+  Run Classification
+  </button>
+
+  <button mat-raised-button (click)="reset()" *ngIf="type_pred" color="primary">
+  Classify Another Image
+  </button>
+
+</div>
+
+
+

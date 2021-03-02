@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidebarOpened=!sidebarOpened">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Skin Lesion Classifier</span>
+  <div class="logos">
+    <img class="tf" [src]="'assets/images/Tensorflow_logo.png'" height="50">
+    <img class="ng" [src]="'assets/images/angular.png'" height="50">
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="sidebarOpened">
+    
+    <button mat-stroked-button
+            (click)="openLink('https://colab.research.google.com/drive/12tVpcsQMFHHbB5SbFozdss4ZmEl0JsvM?usp=sharing')">Network
+    Training
+    </button>
+
+    <button mat-stroked-button
+      (click)="openLink('https://github.com/Hamptonjc')">
+    Github
+    </button>
+    
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="center">
+      <app-classifier></app-classifier>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+
+

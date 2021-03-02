@@ -1,0 +1,36 @@
+
+.mat-toolbar {
+  position: relative;
+  justify-content: space-between;
+}
+
+
+.mat-toolbar .logos .ng {
+  margin-left: 12px;
+}
+
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav, mat-sidenav-content {
+  padding: 16px;
+}
+
+mat-sidenav {
+  background-color: black;
+  width: 200px;
+}
+
+mat-sidenav button{
+  margin: 10px;
+}
+
+.center {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
