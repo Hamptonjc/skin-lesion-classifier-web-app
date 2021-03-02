@@ -1,27 +1,15 @@
-# SkinLesionClassifier
+# Pigmented Skin Lesion Classifier Web-App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+ [https://hamptonjc.github.io/skin-lesion-classifier-web-app/](https://hamptonjc.github.io/skin-lesion-classifier-web-app/)
 
-## Development server
+This web-app uses a Mobilenet neural network to classify images of skin lesions (i.e. moles).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Training
+The network was developed in Python with Tensorflow.
 
-## Code scaffolding
+The training process is availible in a Colab notebook -> [link](https://tinyurl.com/skin-lesion)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The network started from a pretrained Mobilenet. The architecture was modified to fit the problem. The network was trained on the HAM10000 dataset ->[link](https://www.kaggle.com/kmader/skin-cancer-mnist-ham10000)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Web-App
+The network was converted into a TensorflowJS model. The web-app was developed with Angular & Angular Material.
