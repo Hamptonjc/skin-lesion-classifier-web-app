@@ -1,18 +1,17 @@
 
 
 <div class="prediction" *ngIf="type_pred">
-  <h2>Classified as: {{type_pred}}</h2>
+  <h2>Classified as: <a class="pred_link" href={{wiki_link}} target="_blank">{{type_pred}}</a></h2>
 </div>
 
 <div class="image">
   <mat-spinner *ngIf="showSpinner"></mat-spinner>
   <img class="upload" [src]="imgURL" height="400" *ngIf="imgURL && !showSpinner">
-  <img class="net" [src]="'assets/images/net.png'" height="400" *ngIf="!imgURL && !showSpinner" style='color: white'>
 </div>
 
 
 <div class="buttons">
-  <button mat-raised-button (click)="openInput()" *ngIf="!imgURL" color="primary">
+  <button mat-raised-button (click)="openInput()" *ngIf="!imgURL && model" color="primary">
   Select Image of Skin Lesion
   </button>
 

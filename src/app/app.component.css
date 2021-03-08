@@ -4,9 +4,13 @@
   justify-content: space-between;
 }
 
+.mat-toolbar .title {
+  font-family: Helvetica;
+  font-size: 170%;
+}
 
 .mat-toolbar .logos .ng {
-  margin-left: 12px;
+  margin-left: 5px;
 }
 
 
@@ -29,8 +33,7 @@ mat-sidenav button{
 
 .center {
   height: 600px;
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
 }
-
